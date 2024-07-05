@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Music Genres</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css\bootstrap.min(quarz_theme).css" rel="stylesheet">
+    <link href="css\styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div>
+        <h1 style="margin-top: 30px; margin-left: 50px;">
+            Listen-Discover-Enjoy
+            <small class="text-body-secondary">...let us dancing, girl or boy</small>
+        </h1>
+    </div>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <div class="row">
+            <p style="margin-inline-start: 80px;">More about artists &darr;</p>
+            <div class="container" style="margin-inline-start: 125px;">
+                <button type="button" class="btn btn-primary btn-lg button"><span>Los Armenios</span></button>
+                <button type="button" class="btn btn-primary btn-lg button"><span>World Music</span></button>
+                <button type="button" class="btn btn-primary btn-lg button"><span>Rap / Hip-Hop</span></button>
+                <button type="button" class="btn btn-primary btn-lg button"><span>Rock</span></button>
+            </div>
+
+            <p style="margin-inline-start: 80px;">Here some magicians of world music...</p>
+
+            <div class="col-md-4 image-container">
+                <img src="image\MashinaVremeni.jpg" alt="MashinaVremeni">
+                <span class="play-icon" type="button" onclick="playAudio('audio1')" ondblclick="pauseAudio('audio1')">&#9654;</span>
+                <audio id="audio1" src="music\Однажды мир прогнется под нас.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\Nirvana.jpg" alt="Nirvana">
+                <span class="play-icon" type="button" onclick="playAudio('audio2')" ondblclick="pauseAudio('audio2')">&#9654;</span>
+                <audio id="audio2" src="music\Smells Like Teen Spirit.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\Tupac.jpg" alt="Tupac">
+                <span class="play-icon" type="button" onclick="playAudio('audio3')" ondblclick="pauseAudio('audio3')">&#9654;</span>
+                <audio id="audio3" src="music\2Pac - Picture Me Rollin' (feat. Danny Boy, Big Syke & CPO).mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\BuenaVistaSocialClub.jpg" alt="BuenaVistaSocialClub">
+                <span class="play-icon" type="button" onclick="playAudio('audio4')" ondblclick="pauseAudio('audio4')">&#9654;</span>
+                <audio id="audio4" src="music\Chan Сhan - Buena Vista Social Club - Buena Vista Social Club - 1997.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\Coolio.jpg" alt="Coolio">
+                <span class="play-icon" type="button" onclick="playAudio('audio5')" ondblclick="pauseAudio('audio5')">&#9654;</span>
+                <audio id="audio5" src="music\I Like Girls.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\EazyE.jpg" alt="EazyE">
+                <span class="play-icon" type="button" onclick="playAudio('audio6')" ondblclick="pauseAudio('audio6')">&#9654;</span>
+                <audio id="audio6" src="music\Radio (feat. Dr. Dre, MC Ren).mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\ElvisPresley.jpg" alt="ElvisPresley">
+                <span class="play-icon" type="button" onclick="playAudio('audio7')" ondblclick="pauseAudio('audio7')">&#9654;</span>
+                <audio id="audio7" src="music\Are You Lonesome Tonight.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\EmmaShapplin.jpg" alt="EmmaShapplin">
+                <span class="play-icon" type="button" onclick="playAudio('audio8')" ondblclick="pauseAudio('audio8')">&#9654;</span>
+                <audio id="audio8" src="music\Spente Le Stelle....mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\FuSchnickens.jpg" alt="FuSchnickens">
+                <span class="play-icon" type="button" onclick="playAudio('audio9')" ondblclick="pauseAudio('audio9')">&#9654;</span>
+                <audio id="audio9" src="music\True Fuschnick.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\GunsNRoses.jpg" alt="GunsNRoses">
+                <span class="play-icon" type="button" onclick="playAudio('audio10')" ondblclick="pauseAudio('audio10')">&#9654;</span>
+                <audio id="audio10" src="music\Sweet Child O' Mine.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\GunsNRoses.jpg" alt="GunsNRoses">
+                <span class="play-icon" type="button" onclick="playAudio('audio11')" ondblclick="pauseAudio('audio11')">&#9654;</span>
+                <audio id="audio11" src="music\Welcome To The Jungle.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\Tupac.jpg" alt="Tupac">
+                <span class="play-icon" type="button" onclick="playAudio('audio12')" ondblclick="pauseAudio('audio12')">&#9654;</span>
+                <audio id="audio12" src="music\2Pac - Picture Me Rollin' (feat. Danny Boy, Big Syke & CPO).mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\JohnLennon.jpg" alt="JohnLennon">
+                <span class="play-icon" type="button" onclick="playAudio('audio13')" ondblclick="pauseAudio('audio13')">&#9654;</span>
+                <audio id="audio13" src="music\Imagine.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\SecretGarden.jpg" alt="SecretGarden">
+                <span class="play-icon" type="button" onclick="playAudio('audio14')" ondblclick="pauseAudio('audio14')">&#9654;</span>
+                <audio id="audio14" src="music\Nocturne.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\TegoCalderon.jpg" alt="TegoCalderon">
+                <span class="play-icon" type="button" onclick="playAudio('audio15')" ondblclick="pauseAudio('audio15')">&#9654;</span>
+                <audio id="audio15" src="music\Pa' Que Retozan.mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\YingTangTwins.jpg" alt="YingTangTwins">
+                <span class="play-icon" type="button" onclick="playAudio('audio16')" ondblclick="pauseAudio('audio16')">&#9654;</span>
+                <audio id="audio16" src="music\Ying Yang Twins - Salt Shaker (Extended Remix) (Feat. Juvenile, Murphy Lee, Lil Jon, Fat Joe, Pitbull, Jacki-O, Bg & Fatman Scoop).mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\FuSchnickens.jpg" alt="FuSchnickens">
+                <span class="play-icon" type="button" onclick="playAudio('audio17')" ondblclick="pauseAudio('audio17')">&#9654;</span>
+                <audio id="audio17" src="music\What's Up Doc (Can We Rock) (K-Cut's Fat Trac Remix Feat. Shaquille O'Neal).mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\Tupac.jpg" alt="Tupac">
+                <span class="play-icon" type="button" onclick="playAudio('audio18')" ondblclick="pauseAudio('audio18')">&#9654;</span>
+                <audio id="audio18" src="music\2Pac - Skandalouz (feat. Nate Dogg).mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\Tupac.jpg" alt="Tupac">
+                <span class="play-icon" type="button" onclick="playAudio('audio19')" ondblclick="pauseAudio('audio19')">&#9654;</span>
+                <audio id="audio19" src="music\2Pac - Still Ballin' (Nitty Remix) (feat. Trick Daddy).mp3"></audio>
+            </div>
+            <div class="col-md-4 image-container">
+                <img src="image\Coolio.jpg" alt="Coolio">
+                <span class="play-icon" type="button" onclick="playAudio('audio20')" ondblclick="pauseAudio('audio20')">&#9654;</span>
+                <audio id="audio20" src="music\Ghetto Square Dance.mp3"></audio>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <p style="margin-bottom: 10; margin-left: 30;"><a href="https://www.linkedin.com/in/levon-gasparyan-1b057727a/" target="_blank">Made by Levon Gasparyan</p>
+    <script>
+
+var currentAudio = null;
+
+function playAudio(audioId) {
+    if (currentAudio && currentAudio.id !== audioId) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+    currentAudio = document.getElementById(audioId);
+    if (currentAudio.paused) {
+        currentAudio.play();
+    } else {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+}
+    </script>
+
+</body>
+</html>
