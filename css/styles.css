@@ -89,12 +89,52 @@
   font-size: 56px;
 }
 
-/* .......................... */
-
 .filterDiv {
   display: none;
 }
 
 .show {
   display: block;
+}
+
+span.player {
+  font-size: 20px;
+  width: 100px;
+  height: 100px;
+  animation-name: example;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%  {color: rgb(255, 0, 89);}
+  0%  {color: wheat;}
+}
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px none;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+#panel img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.button-container .btn {
+  margin: 5px;
+}
+
+.container {
+  padding-bottom: 20px;
 }

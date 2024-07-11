@@ -6,6 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css\bootstrap.min(quarz_theme).css" rel="stylesheet">
     <link href="css\styles.css" rel="stylesheet">
+    <script src="jquery\jquery-3.7.1.min.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            $("#underbtnmsgID").css("display", "block");
+            $("#buttonID1").click(function() {
+                $("#underbtnmsgID").css("display","none");
+            });
+            $("#myUnderBtnMsgContainer").css("display", "none");
+            $("#buttonID1").click(function() {
+                $("#myUnderBtnMsgContainer").css("display", "block");
+                $("#underbtnmsgID2, #underbtnmsgID3, #underbtnmsgID4, #underbtnmsgID5").hide();
+                $("#underbtnmsgID1").show()
+            });
+            $("#buttonID2").click(function() {
+                $("#underbtnmsgID").css("display","none");
+                $("#myUnderBtnMsgContainer").css("display", "block");
+                $("#underbtnmsgID1, #underbtnmsgID3, #underbtnmsgID4, #underbtnmsgID5").hide();
+                $("#underbtnmsgID2").show()
+            });
+            $("#buttonID3").click(function() {
+                $("#underbtnmsgID").css("display","none");
+                $("#myUnderBtnMsgContainer").css("display", "block");
+                $("#underbtnmsgID1, #underbtnmsgID2, #underbtnmsgID4, #underbtnmsgID5").hide();
+                $("#underbtnmsgID3").show()
+            });
+            $("#buttonID4").click(function() {
+                $("#underbtnmsgID").css("display","none");
+                $("#myUnderBtnMsgContainer").css("display", "block");
+                $("#underbtnmsgID1, #underbtnmsgID2, #underbtnmsgID3, #underbtnmsgID5").hide();
+                $("#underbtnmsgID4").show()
+            });
+            $("#buttonID5").click(function() {
+                $("#underbtnmsgID").css("display","none");
+                $("#myUnderBtnMsgContainer").css("display", "block");
+                $("#underbtnmsgID1, #underbtnmsgID2, #underbtnmsgID3, #underbtnmsgID4").hide();
+                $("#underbtnmsgID5").show()
+            });
+        });
+        $(document).ready(function(){
+            $("#flip").mouseover(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
 
 </head>
 
@@ -14,50 +60,51 @@
         <h1 style="margin-top: 30px; margin-left: 50px;">
             Listen-Discover-Enjoy
             <small class="text-body-secondary">...let us dancing, girl or boy</small>
+            <span class="player" style="margin-left: 400px; font-size: 100px;">&#128254;</span><span class="player">&#127925;</span>
             <hr>
         </h1>
     </div>
-    <br>
     <br>
 
 
     <div class="container">
         <div class="row">
-            
-            <div id="myBtnContainer" class="button-container" style="margin-inline-start: auto; padding: 10;" >
-                <button type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('all')"><span>Show all</span></button>
-                <button type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('losArmenios')"><span>Los Armenios</span></button>
-                <button type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('worldMusic')"><span>World Music</span></button>
-                <button type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('rap/hip-hop')"><span>Rap / Hip-Hop</span></button>
-                <button type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('rock')"><span>Rock</span></button>
+
+            <div id="flip" class="text-body-secondary" style="margin-bottom: 30px;">Whos the Best? &#11015;</div>
+            <div id="panel">
+                <img src="image\backscreen.gif">
             </div>
             <hr>
 
-            <p><small class="text-body-secondary" style="margin-inline-start: 500px;"> Here some magicians of world music...</small></p>
+            <div id="myBtnContainer" class="button-container" style="margin-inline-start: auto; padding: 10;">
+                <button id="buttonID1" type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('all')"><span>Show all</span></button>
+                <button id="buttonID2" type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('losArmenios')"><span>LosArmenios</span></button>
+                <button id="buttonID3" type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('worldMusic')"><span>World Music</span></button>
+                <button id="buttonID4" type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('rap/hip-hop')"><span>Rap/Hip Hop</span></button>
+                <button id="buttonID5" type="button" class="btn btn-primary btn-lg button" onclick="filterSelection('rock')"><span>Rock</span></button>
+            </div>
+            <hr>
+
+            <p id="underbtnmsgID"><small class="text-body-secondary" style="margin-inline-start: 530px;"> You can filter artists with buttons above</small></p>
+
+            <div  id="myUnderBtnMsgContainer" style="margin-inline-start: 530px;">
+                <p id="underbtnmsgID1"><small class="text-body-secondary"> You can filter artists with buttons above</small></p>
+                <p id="underbtnmsgID2"><small class="text-body-secondary"> &nbsp;&nbsp;Here Los Angeles' Armenian rappers</small></p>
+                <p id="underbtnmsgID3"><small class="text-body-secondary"> &nbsp;Here some magicians of world music...</small></p>
+                <p id="underbtnmsgID4"><small class="text-body-secondary"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;True Hip-Hop is here 3..2..1&#129512;</small></p>
+                <p id="underbtnmsgID5"><small class="text-body-secondary"> &nbsp;&nbsp;Shake your heads, Rock is coming &#127928;</small></p>
+            </div>
 
             <div>
                 <div class="filterDiv rap/hip-hop">
                     <div class="col-md-12 image-text-container">
                         <div class="image-text-container">
                             <img src="image\Tupac.jpg" alt="Tupac">
-                            <span class="play-icon" type="button" onclick="playAudio('audio3')" ondblclick="pauseAudio('audio3')">&#9654;</span>
-                            <audio id="audio3" src="music\2Pac - Picture Me Rollin' (feat. Danny Boy, Big Syke & CPO).mp3"></audio>
+                            <span class="play-icon" type="button" onclick="playAudio('audio1')" ondblclick="pauseAudio('audio1')">&#9654;</span>
+                            <audio id="audio1" src="music\2Pac - Picture Me Rollin' (feat. Danny Boy, Big Syke & CPO).mp3"></audio>
                         </div>
                         <div>
                             Tupac Amaru Shakur (born Lesane Parish Crooks; June 16, 1971  September 13, 1996), also known by his stage names 2Pac and Makaveli, was an American rapper, activist and songwriter. Considered to be one of the most influential and successful rappers of all time, academics regard him as one of the most influential music artists of the 20th century and also a politically conscious activist voice for Black America. Shakur is among the best-selling music artists, having sold more than 75 million records worldwide. His lyrical content has been noted for addressing social injustice, political issues, and the marginalization of other African-Americans, but he was also synonymous with gangsta rap and violent lyrics.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filterDiv rock">
-                    <div class="col-md-12 image-text-container">
-                        <div class="image-text-container">
-                            <img src="image/MashinaVremeni.jpg" alt="Mashina Vremeni">
-                            <span class="play-icon" onclick="playAudio('audio1')" ondblclick="pauseAudio('audio1')">&#9654;</span>
-                            <audio id="audio1" src="music/Однажды мир прогнется под нас.mp3"></audio>
-                        </div>
-                        <div>
-                            Mashina Vremeni (Russian: Машина времени, 'Time Machine') is a Russian rock band founded in 1969. Mashina Vremeni was a pioneer of Soviet rock music and remains one of the oldest still-active rock bands in Russia. The band's music incorporates elements of classic rock, blues, and bard's song. Mashina Vremeni's best known members are Andrei Makarevich (founder, principal singer-songwriter, public face of the band), Alexander Kutikov (bass player and producer/sound engineer), and Evgeny Margulis (guitarist/songwriter).
                         </div>
                     </div>
                 </div>
@@ -71,6 +118,19 @@
                         </div>
                         <div>
                             Nirvana was an American rock band formed in Aberdeen, Washington, in 1987. Founded by lead singer and guitarist Kurt Cobain and bassist Krist Novoselic, the band went through a succession of drummers, most notably Chad Channing, before recruiting Dave Grohl in 1990. Nirvana's success popularized alternative rock, and they were often referenced as the figurehead band of Generation X. Despite a short mainstream career spanning only three years, their music maintains a popular following and continues to influence modern rock culture.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filterDiv rock">
+                    <div class="col-md-12 image-text-container">
+                        <div class="image-text-container">
+                            <img src="image/MashinaVremeni.jpg" alt="Mashina Vremeni">
+                            <span class="play-icon" onclick="playAudio('audio3')" ondblclick="pauseAudio('audio3')">&#9654;</span>
+                            <audio id="audio3" src="music/Однажды мир прогнется под нас.mp3"></audio>
+                        </div>
+                        <div>
+                            Mashina Vremeni (Russian: Машина времени, 'Time Machine') is a Russian rock band founded in 1969. Mashina Vremeni was a pioneer of Soviet rock music and remains one of the oldest still-active rock bands in Russia. The band's music incorporates elements of classic rock, blues, and bard's song. Mashina Vremeni's best known members are Andrei Makarevich (founder, principal singer-songwriter, public face of the band), Alexander Kutikov (bass player and producer/sound engineer), and Evgeny Margulis (guitarist/songwriter).
                         </div>
                     </div>
                 </div>
@@ -182,13 +242,12 @@
                 <div class="filterDiv rap/hip-hop">
                     <div class="col-md-12 image-text-container">
                         <div class="image-text-container">
-                            <img src="image\Tupac.jpg" alt="Tupac">
+                            <img src="image\Wu-Tang.jpg" alt="Tupac">
                             <span class="play-icon" type="button" onclick="playAudio('audio12')" ondblclick="pauseAudio('audio12')">&#9654;</span>
-                            <audio id="audio12" src="music\2Pac - Picture Me Rollin' (feat. Danny Boy, Big Syke & CPO).mp3"></audio>
+                            <audio id="audio12" src="music\Gun Will Go (Feat. Sunny Valentine).mp3"></audio>
                         </div>
                         <div>
-                            Tupac Amaru Shakur (born Lesane Parish Crooks; June 16, 1971  September 13, 1996), also known by his stage names 2Pac and Makaveli, was an American rapper, activist and songwriter. Considered to be one of the most influential and successful rappers of all time, academics regard him as one of the most influential music artists of the 20th century and also a politically conscious activist voice for Black America. Shakur is among the best-selling music artists, having sold more than 75 million records worldwide. His lyrical content has been noted for addressing social injustice, political issues, and the marginalization of other African-Americans, but he was also synonymous with gangsta rap and violent lyrics.
-                        </div>
+                            Wu-Tang Clan is an American hip hop musical collective formed in Staten Island, New York City, in 1992. Its members include RZA, GZA, Method Man, Raekwon, Ghostface Killah, Inspectah Deck, U-God, Masta Killa, and, until his death in 2004, Ol' Dirty Bastard. Close affiliate Cappadonna later became an official member. They are credited for revitalizing East Coast hip hop and are considered one of the greatest hip hop groups of all time.</div>
                     </div>
                 </div>
 
